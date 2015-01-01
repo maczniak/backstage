@@ -13,15 +13,21 @@ Feature
 Application
 * partition (sharding)
 * standby replica
-* command a query to multiple servers
+* command a query to multiple servers (server tree)
 * distribute transaction logs
 * manage a cluster-global unique key
 * coordinate a distributed transaction
 * abstract interface that hides an append-only immutable dataset from developers
 * failover
+* result set merge & flexible scoring
+* connection pool with load balancing
+* database operations without downtime
 
 See also
 * [MySQL Proxy](http://dev.mysql.com/doc/mysql-proxy/)
 * [Twitter Gizzard](https://github.com/twitter/gizzard)
 * [LinkedIn Databus](https://engineering.linkedin.com/data-replication/open-sourcing-databus-linkedins-low-latency-change-data-capture-system) ([1](http://data.linkedin.com/projects/databus))
+* [Google Vitess](https://github.com/youtube/vitess)
+* [Tumblr Jetpants](https://github.com/tumblr/jetpants)
+* [Netflix Dynomite](http://techblog.netflix.com/2014/11/introducing-dynomite.html)
 * RDBMS vendor-specfic replication
