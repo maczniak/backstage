@@ -31,6 +31,8 @@ See also
 * [Google Vitess](https://github.com/youtube/vitess)
 * [Tumblr Jetpants](https://github.com/tumblr/jetpants)
 * [Netflix Dynomite](http://techblog.netflix.com/2014/11/introducing-dynomite.html)
+* [AWS Database Migration Service](http://aws.amazon.com/dms/)
 * [Flyway](http://flywaydb.org/) (database migration tool)
+* [Liquibase](http://www.liquibase.org/) (database refactoring tool)
 * [Compose's High Availability PostgreSQL service](https://blog.compose.io/high-availability-for-postgresql-batteries-not-included/)
 * RDBMS vendor-specfic replication

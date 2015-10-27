@@ -1,0 +1,8 @@
+server: "<SERVER:PORT HERE>" # like "localhost:5432"
+user: "<DATABASE USER HERE>"
+password: "<DATABASE PASSWORD HERE>"
+database: "<DATABASE NAME HERE>"
+query: "<SQL QUERY HERE>"
+
+debug: true
+#info: true
