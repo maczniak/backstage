@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"github.com/spf13/viper"
 	"io"
+	"strconv"
 )
 
 func readInt32(c *PGConn) uint32 {
@@ -55,11 +56,7 @@ func getInt32FromByteSlice(bs []byte) uint32 {
 }
 
 func getIntFromByteSlice(bs []byte, len int) int {
-	ret := 0
-	for i := 0; i < len; i++ {
-		ret <<= 8
-		ret += int(bs[i])
-	}
+	ret, _ := strconv.Atoi(string(bs))
 	return ret
 }
 
