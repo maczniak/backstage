@@ -2,10 +2,12 @@ package main
 
 import (
 	. "backstage/postgresql"
+	"bufio"
 	"fmt"
 	"github.com/spf13/viper"
 	"log"
 	"os"
+	"strings"
 )
 
 func main() {
@@ -19,8 +21,9 @@ func main() {
 	user := viper.GetString("user")
 	password := viper.GetString("password")
 	database := viper.GetString("database")
-	query := viper.GetString("query")
+	//query := viper.GetString("query")
 
+	fmt.Printf("connecting to %s,%s\n", server, database)
 	conn, err := Connect(server)
 	checkError(err)
 
@@ -31,12 +34,24 @@ func main() {
 		fmt.Println()
 	}
 
-	results, err := conn.Query(query)
-	checkError(err)
-	if viper.GetBool("debug") {
-		fmt.Println(results["description"])
-		fmt.Println(StringRows(results["rows"].([]DataRow),
-			results["description"].(RowDescription)))
+	console := bufio.NewReader(os.Stdin)
+	for {
+		fmt.Print("> ")
+		query, err := console.ReadString('\n')
+		checkError(err)
+		query = strings.TrimSpace(query)
+		if query == "q" || query == "quit" || query == "exit" {
+			break
+		}
+
+		results, err := conn.Query(query)
+		checkError(err)
+
+		if _, ok := results["description"]; ok {
+			fmt.Println(results["description"])
+			fmt.Println(StringRows(results["rows"].([]DataRow),
+				results["description"].(RowDescription)))
+		}
 		fmt.Println(results["command_tag"])
 		fmt.Println(results["transaction_status"])
 		fmt.Println()
