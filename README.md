@@ -22,6 +22,7 @@ Application
 * result set merge & flexible scoring
 * connection pool with load balancing
 * database operations without downtime
+* encryption
 
 See also
 * [MySQL Proxy](http://dev.mysql.com/doc/mysql-proxy/)
@@ -35,4 +36,7 @@ See also
 * [Flyway](http://flywaydb.org/) (database migration tool)
 * [Liquibase](http://www.liquibase.org/) (database refactoring tool)
 * [Compose's High Availability PostgreSQL service](https://blog.compose.io/high-availability-for-postgresql-batteries-not-included/)
-* RDBMS vendor-specfic replication
+* [SQL reflector](http://www.speedment.com/SpeedmentSqlReflector.html) into Hazelcast
+* [SoundCloud's Large Hadron Migrator](https://github.com/soundcloud/lhm)
+* [ZeroDB](http://www.zerodb.io/) (end-to-end encryption)
+* RDBMS vendor-specfic replication like Oracle GoldenGate
