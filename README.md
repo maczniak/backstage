@@ -39,4 +39,5 @@ See also
 * [SQL reflector](http://www.speedment.com/SpeedmentSqlReflector.html) into Hazelcast
 * [SoundCloud's Large Hadron Migrator](https://github.com/soundcloud/lhm)
 * [ZeroDB](http://www.zerodb.io/) (end-to-end encryption)
+* [GitHub's gh-ost](https://github.com/github/gh-ost) (MySQL online schema migration)
 * RDBMS vendor-specfic replication like Oracle GoldenGate
